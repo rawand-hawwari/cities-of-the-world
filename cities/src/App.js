@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/header';
 import CitiesList from './components/CitiesList';
 import Footer from './components/footer';
+import About from './components/About';
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -12,7 +14,9 @@ function App() {
         <Header />
         <Routes>
           <Route path='/' element={<Home citiesData={citiesData} />}></Route>
+          <Route path='/about' element={<About />}></Route>
           <Route path='/cities' element={<CitiesList citiesData={citiesData} />}></Route>
+          <Route path='/contact' element={<Contact />}></Route>
         </Routes>
       </Router>
       <Footer />
